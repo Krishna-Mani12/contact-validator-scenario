@@ -48,3 +48,6 @@ def test_normalize_phone():
     result = normalize_phone(phone)
 
     assert result == "5551234567"
+def test_normalize_phone_invalid():
+    with pytest.raises(ValueError):
+        normalize_phone("123")
